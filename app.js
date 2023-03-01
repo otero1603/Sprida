@@ -3,10 +3,10 @@ const sectBtns = document.querySelectorAll('.controls');
 const sectBtn = document.querySelectorAll('.control');
 const allSections = document.querySelectorAll('.main-content');
 
-var siteWidth = 1280;
-var scale = screen.width /siteWidth;
+var scale = window.outerWidth / 1280;
 
-document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+$('head').append('<meta name="viewport" content="width=1280, initial-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=0">');
+
 
 function PageTransitions(){
     //Button click active class
