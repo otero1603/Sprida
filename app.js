@@ -3,11 +3,6 @@ const sectBtns = document.querySelectorAll('.controls');
 const sectBtn = document.querySelectorAll('.control');
 const allSections = document.querySelectorAll('.main-content');
 
-var scale = window.outerWidth / 1280;
-
-$('head').append('<meta name="viewport" content="width=1280, initial-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=0">');
-
-
 function PageTransitions(){
     //Button click active class
     for(let i = 0; i < sectBtn.length; i++){

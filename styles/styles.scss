@@ -8,6 +8,7 @@
 :root{
     --color-primary: #FACC94;
     --color-secondary: #B42525;
+    --color-third: #57c5769a;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey-0: #f8f8f8;
@@ -26,4 +27,214 @@ body{
     font-size: 1.1rem;
     color: var(--color-black);
     transition: all .4s ease-in-out;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+header{
+    height: 100vh;
+    color: var(--color-secondary);
+    overflow: hidden;
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+}
+
+.section{
+    transform: translateY(-100%) scale(0);
+    transition: all .4s ease-in-out;
+    background-color: var(--color-primary);
+}
+
+.sec1{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.sec2{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #dd9c4e;
+}
+
+.sec3{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #f89d2f;
+}
+
+.sec4{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #f08e15;
+}
+
+.sec5{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #ff8c00;
+}
+
+.sec6{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #ffffff;  
+    
+}
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+}
+@keyframes scaleAnim{
+    0%{
+        transform: translateY(-100%) scaleY(0);
+    }
+    100%{
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+/*Controls*/
+
+.controls{
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+.active-btn{
+    background-color: var(--color-third) !important;
+    transition: all .4s ease-in-out;
+}
+.control{
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-white);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7rem 0;
+    box-shadow: var(--box-shadow-1); 
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+i{
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    pointer-events: none;
+}
+
+/*Header Content*/
+.header-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 100%;
+}
+.left-header{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10rem;
+}
+.name{
+  font-size: 6rem;
+  align-items: left;
+}
+span{
+  color:var(--color-secondary);
+}
+p{
+  margin: 8rem 0;
+  line-height: 1.5rem;
+}
+
+ /*Independent components*/
+ .btn-cont{
+  display:flex;
+  align-self: flex-start;
+}
+.main-btn{
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-black);
+  display: flex;
+  align-self: flex-start;
+  display:flex;
+  align-items: center;
+  overflow: hidden;
+  .btn.text{
+    padding: 0 5rem;
+  }
+  .btn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all .4s ease-in-out;
+    z-index: -1;
+  }
+  &:hover{
+    &::before{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-third);
+        transform:translateX(0);
+    }
+  }
+}
+
+.image{
+  border-radius: var(--br-sm-2);
+  height: 100%;
+  width: 100%;
+  margin-left: .1rem;
+  transition: all .4s ease-in-out;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s ease-in-out;
+    filter: grayscale(0);
+    &:hover{
+        filter: grayscale(100);
+    }
+  }
+}
+
+.right-header{
+  display:flex;
+  align-items:center;
+  position: relative;
 }
