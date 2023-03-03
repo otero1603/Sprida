@@ -6,9 +6,12 @@
 }
 
 :root {
-  --color-primary: #FACC94;
-  --color-secondary: #B42525;
-  --color-third: #57c5769a;
+  --color-primary: #FC7A00;
+  --color-secondary: #FFC0E0;
+  --color-third: #E768C5;
+  --color-fourth: #507654;
+  --color-fifth: #F9E6C6;
+  --color-sixth: #E5DDFB;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey-0: #f8f8f8;
@@ -23,7 +26,6 @@
 
 body {
   background-color: var(--color-primary);
-  font-family: "Mali", cursive;
   font-size: 1.1rem;
   color: var(--color-black);
   transition: all 0.4s ease-in-out;
@@ -37,9 +39,22 @@ a {
 }
 
 header {
+  font-family: "Aladin";
   height: 100vh;
   color: var(--color-secondary);
   overflow: hidden;
+}
+
+h1 {
+  color: var(--color-secondary);
+  font-family: "Aladin";
+  font-size: 50rem;
+}
+
+h2 {
+  color: var(--color-secondary);
+  font-family: "Gabriela";
+  font-size: 4rem;
 }
 
 section {
@@ -65,31 +80,26 @@ section {
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: #dd9c4e;
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: #f89d2f;
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: #f08e15;
 }
 
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: #ff8c00;
 }
 
 .sec6 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: #ffffff;
 }
 
 .active {
@@ -164,7 +174,7 @@ i {
 }
 
 .name {
-  font-size: 6rem;
+  font-size: 20rem;
   align-items: left;
 }
 
@@ -173,8 +183,11 @@ span {
 }
 
 p {
+  color: var(--color-fourth);
+  font-family: "Suranna";
+  font-size: 2rem;
   margin: 8rem 0;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 /*Independent components*/
@@ -239,8 +252,21 @@ p {
   filter: grayscale(100);
 }
 
+.h-shape {
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-third);
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+}
+
 .right-header {
   display: flex;
   align-items: center;
   position: relative;
-}
+}/*# sourceMappingURL=styles.css.map */
